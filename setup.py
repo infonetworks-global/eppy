@@ -10,8 +10,8 @@ if sys.version_info < (3,2):
 setup(
     name = "EPP",
     version = __version__,
-    author = "Wil Tan",
-    author_email = "wil@cloudregistry.net",
+    author = "Tim Mesker",
+    author_email = "tim@verifyip.info",
     description = "EPP Client for Python",
     license = "MIT/X",
     install_requires = install_requires,
