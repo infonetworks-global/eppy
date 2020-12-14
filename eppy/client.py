@@ -75,7 +75,6 @@ class EppClient(object):
         local_addr, local_port = local_sock_addr[:2]
         self.log.debug('connected local=%s:%s remote=%s:%s',
                        local_addr, local_port, self.sock.getpeername()[0], port)
-        self.sock.settimeout(self.socket_timeout)  # regular timeout
         if self.ssl_enable:
             self.sock = ssl.wrap_socket(self.sock, self.keyfile, self.certfile,
                                         ssl_version=self.ssl_version,
@@ -92,6 +91,7 @@ class EppClient(object):
                     self.log.exception("SSL hostname mismatch")
                     raise EppConnectionError(str(exp))
         self.greeting = EppResponse.from_xml(self.read().decode('utf-8'))
+        self.sock.settimeout(self.socket_timeout)  # regular timeout
 
     def remote_info(self):
         """
