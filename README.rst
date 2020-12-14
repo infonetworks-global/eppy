@@ -7,6 +7,8 @@ Introduction
 eppy is a Python-based API for the `Extensible Provisioning Protocol`_ (EPP),
 commonly used for communication between domain registries and registrars.
 
+This repository is a fork of https://github.com/cloudregistry/eppy for use at InfoNetworks LLC.
+
 
 Features
 --------
@@ -25,34 +27,9 @@ Installation
 
 If you're using a virtualenv_ (almost always a good idea), activate it first.
 
-
-Stable
-^^^^^^
-
-To install ``eppy``:
-
 ::
 
-   pip install EPP
-
-or::
-
-   easy_install EPP
-
-
-NOTE: While the module name is ``eppy``, the package on PyPI is named EPP
-because `eppy` was already taken by another unrelated project.
-
-
-Bleeding Edge
-^^^^^^^^^^^^^
-
-Alternatively, you may track the development version by cloning the git
-repository instead.
-
-::
-
-   pip install -e git+https://github.com/cloudregistry/eppy.git#egg=EPP
+   pip install -e git+https://github.com/infonetworks-global/eppy.git#egg=EPP
 
 
 
